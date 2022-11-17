@@ -12,26 +12,30 @@ export function renderStock(stockObject) {
 
 }
 
+export function renderAnimal(animalObject) {
+    const div = document.createElement('div');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = animalObject.name;
+
+    const p = document.createElement('p');
+    p.textContent = `${animalObject.scientific} and ${animalObject.personality}`;
 
 
-// export function renderAnimal(animalObject) {
-//     const div = document.createElement('div');
+    div.append(h2, p);
+    return div;
+}
 
-//     const h2 = document.createElement('h2');
-//     h2.textContent = animalObject.name;
+export function renderCompany(companyObject) {
+    const div = document.createElement('div');
 
-//     const p = document.createElement('p');
-//     p.textContent = `${animalObject.name} is in ${stockObject.market}`;
+    const h1 = document.createElement('h1');
+    h1.textContent = `${companyObject.name} and ${companyObject.ein}`;
 
+    const p = document.createElement('p');
+    p.textContent = companyObject.phrase;
 
+    div.append(h1, p);
+    return div;
 
-
-//     const ul = document.createElement('ul');
-//     for (let cap of stockObject.caps) {
-//         const li = document.createElement('li');
-//         li.textContent = cap;
-//         ul.append(li);
-//     }
-//     div.append(h2, p, ul);
-//     return div;
-// }
+}

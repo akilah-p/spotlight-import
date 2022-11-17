@@ -8,8 +8,8 @@ export async function fetchStock() {
     return response.data;
 }
 
-export async function fetchAnimals() {
-    const response = await client.from('animals').select('*').limit(10);
+export async function fetchAnimal() {
+    const response = await client.from('animal').select('*').limit(10);
     return response.data;
 }
 
