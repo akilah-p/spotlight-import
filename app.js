@@ -1,11 +1,12 @@
 /* Imports */
-import { fetchAnimal, fetchStock, fetchCompany } from './fetch-utils.js';
-import { renderAnimal, renderCompany, renderStock } from './render-utils.js';
+import { fetchAnimal, fetchStock, fetchCompany, fetchAvatar } from './fetch-utils.js';
+import { renderAnimal, renderAvatar, renderCompany, renderStock } from './render-utils.js';
 
 /* Get DOM Elements */
 const stockContainer = document.getElementById('stock-list');
 const animalContainer = document.getElementById('animal-list');
 const companyContainer = document.getElementById('company-list');
+const avatarContainer = document.getElementById('avatar-list');
 
 /* Events */
 window.addEventListener('load', async () => {
@@ -37,5 +38,16 @@ window.addEventListener('load', async () => {
 
     }
 });
+
+window.addEventListener('load', async () => {
+    const avatars = await fetchAvatar();
+
+    for (let avatar of avatars) {
+        const avatarEl = renderAvatar(avatar);
+        avatarContainer.append(avatarEl);
+
+    }
+});
+
 
 

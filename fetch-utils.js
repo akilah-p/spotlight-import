@@ -20,5 +20,5 @@ export async function fetchCompany() {
 
 export async function fetchAvatar() {
     const response = await client.from('avatar').select('*').limit(10);
-    response.data;
+    return response.data;
 }
