@@ -49,16 +49,17 @@ export function renderAvatar(avatarObject) {
     const p = document.createElement('p');
     p.textContent = `Call Now: ${avatarObject.phone}. Located in a city near you ${avatarObject.city}`;
 
-
-
-    const ul = document.createElement('ul');
-    for (let color of avatarObject.colors) {
-        const li = document.createElement('li');
-        li.textContent = color;
-        ul.append(li);
-    }
-
-    div.append(img, p);
+    div.append(img, p,);
     return div;
-
 }
+
+    // const ul = document.createElement('ul');
+    // for (let color of avatarObject.colors) {
+    //     const li = document.createElement('li');
+    //     li.textContent = color;
+    //     ul.append(li);
+
+
+
+
+

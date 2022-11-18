@@ -6,6 +6,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function fetchStock() {
     const response = await client.from('stock').select('*').limit(10);
     return response.data;
+
 }
 
 export async function fetchAnimal() {
