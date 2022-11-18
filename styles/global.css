@@ -1,42 +1,141 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
+    --background: rgb(215, 184, 131);
+    --header-background: orange;
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
-    background: var(--background);
+    background-image: url(/assets/pink.jpg);
+    background-size: cover;
     display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-header {
+    transform: scale(0.6);
     position: sticky;
-    top: 0;
-    padding: 15px;
-    height: 80px;
+    grid-template-columns: max-content;
+    margin-left: -300px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-header .logo {
-    height: 100%;
 }
 
 main {
-    padding: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.header {
-    font-size: xx-large;
-    font-weight: bolder;
+header {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: -200px;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+    outline-color: black;
+    position: static;
+    font-family: fantasy, 'Franklin Gothic Medium';
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+audio {
+    opacity: 0.5;
+}
+
+label {
+    text-decoration: wavy;
     color: blue;
+    font-size: 5rem;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    letter-spacing: 3px;
+
+}
+
+.class-div {
+    border: solid black 2px;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+}
+
+h2 {
+    border-bottom: dashed 10px;
+    border-color: black;
+    padding: 10px 1px 15px 50px;
+    width: 100%;
+    font-family: cursive;
+    font-size: 30px;
+    text-align: start;
+    height: 100%;
+    border-spacing: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-align: center;
+    color: blue;
+}
+
+img {
+    border-bottom: dashed 10px;
+    border-color: black;
+    padding: 10px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#stock-list,
+#animal-list,
+#avatar-list,
+#company-list {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border: double 5px white;
+}
+
+#stock-section,
+#animal-section,
+#avatar-section,
+#company-section {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 50px;
+
+
+}
+
+p {
+    font-size: medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }

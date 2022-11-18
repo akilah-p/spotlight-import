@@ -1,8 +1,12 @@
 export function renderStock(stockObject) {
     const div = document.createElement('div');
+    div.classList.add('class-div');
+
+    const span = document.createElement('span');
+    span.textContent = 'Name';
 
     const h2 = document.createElement('h2');
-    h2.textContent = `Stock Name: ${stockObject.name}`;
+    h2.textContent = `${stockObject.name}`;
 
     const p = document.createElement('p');
     p.textContent = `${stockObject.name} is in ${stockObject.market} and has a cap of ${stockObject.caps}`;
@@ -14,6 +18,7 @@ export function renderStock(stockObject) {
 
 export function renderAnimal(animalObject) {
     const div = document.createElement('div');
+    div.classList.add('class-div');
 
     const h2 = document.createElement('h2');
     h2.textContent = `Name:${animalObject.name}`;
@@ -28,20 +33,22 @@ export function renderAnimal(animalObject) {
 
 export function renderCompany(companyObject) {
     const div = document.createElement('div');
+    div.classList.add('class-div');
 
-    const h1 = document.createElement('h1');
-    h1.textContent = `Name: ${companyObject.name} and Ein ${companyObject.ein}`;
+    const h2 = document.createElement('h2');
+    h2.textContent = `Name: ${companyObject.name} and Ein ${companyObject.ein}`;
 
     const p = document.createElement('p');
     p.textContent = `Company Slogan: ${companyObject.phrase}`;
 
-    div.append(h1, p);
+    div.append(h2, p);
     return div;
 
 }
 
 export function renderAvatar(avatarObject) {
     const div = document.createElement('div');
+    div.classList.add('class-div');
 
     const img = document.createElement('img');
     img.src = avatarObject.image;

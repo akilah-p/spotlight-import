@@ -8,6 +8,7 @@ const animalContainer = document.getElementById('animal-list');
 const companyContainer = document.getElementById('company-list');
 const avatarContainer = document.getElementById('avatar-list');
 
+
 /* Events */
 window.addEventListener('load', async () => {
     const stocks = await fetchStock();
@@ -48,6 +49,7 @@ window.addEventListener('load', async () => {
 
     }
 });
+
 
 
 
