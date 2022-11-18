@@ -33,3 +33,10 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.header {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: blue;
+
+}
